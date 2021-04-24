@@ -1,0 +1,18 @@
+
+PROCEDURE Sorting_card
+VAR
+ arr:= ARRAY_OF INTEGER;
+ i:=INTEGER;
+ j:=INTEGER;
+ tmp:=INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 STEP 1  DO
+        tmp:=[i];
+        j:=i-1;
+        WHILE (j>=0 and arr[j]>tmp) DO
+            arr[j+1]=arr[j];
+            j:=j-1;
+        END_WHILE
+        arr[j+1]:=tmp;
+    END_FOR
+END
